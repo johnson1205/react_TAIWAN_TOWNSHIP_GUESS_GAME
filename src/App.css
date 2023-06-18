@@ -57,15 +57,19 @@
   float: left;
   width: 50vh;
   margin-top: 21%;
+  margin-left: 3%;
+  background-color: rgba(204, 204, 204, 0.457);
+  border-radius: 6px;
 }
 
 .upper{
+  margin-top: 10%;
   margin-bottom: 5%;
 }
 .middle{
   margin-bottom: 10%;
 }
-.bingoMessage{
-  margin-top: 10%;
-  color: rgb(13, 112, 13);
+
+.score{
+  margin-bottom: 10%;
 }

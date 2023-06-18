@@ -20,7 +20,6 @@ function App() {
       />
       */
   const {useState} = React;
-  let [bingoMessage, setBingoMessage] = useState("");
   let [isBingoWaiting, setIsBingoWaiting] = useState(0);
   let [selectedTownName, setSelectedTownName] = useState();
   let [randomQuetion, setRandomQuetion] = useState();
@@ -39,7 +38,6 @@ function App() {
     setScore(score=score+1);
     setSelectedTownName(selectedTownName="");
     setIsBingoWaiting(isBingoWaiting=0);
-    setBingoMessage(bingoMessage="")
   }
   
   const mapFeature=(country, layer)=>{
@@ -58,7 +56,6 @@ function App() {
         if((randomQuetion===e.sourceTarget.feature.properties.TOWNNAME)&&(isBingoWaiting===0)){
           setSelectedTownName(selectedTownName=e.sourceTarget.feature.properties.TOWNNAME);
           setIsBingoWaiting(isBingoWaiting=1);
-          setBingoMessage(bingoMessage="答對")
           setTimeout(bingoAction,1000);
         }
         else if(isBingoWaiting===0){
@@ -85,11 +82,10 @@ function App() {
       <MapContainer center={[23.6, 120.9738819]} zoom={7} minZoom={7} maxBounds={mapBound}>
       <GeoJSON style={mapStyle} data={mapdata} onEachFeature={mapFeature}></GeoJSON>
       </MapContainer>
-      <div className='right' align="center">
+      <div className='right' align="center" style={{backgroundColor: isBingoWaiting? "rgb(67, 247, 67)": "rgba(204, 204, 204, 0.457)"}}>
         <div className='upper'>題目：{randomQuetion}</div>
         <div className='middle'>所選擇的區域：{selectedTownName}</div>
         <div className='score'>分數：<b>{score}</b></div>
-        <div className='bingoMessage'>{bingoMessage}</div>
       </div>
     </div>
   ); 
