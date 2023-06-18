@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/react_TAIWAN_TOWNSHIP_GUESS_GAME/static/css/main.e5660894.css",
-    "main.js": "/react_TAIWAN_TOWNSHIP_GUESS_GAME/static/js/main.08a026c8.js",
+    "main.css": "/react_TAIWAN_TOWNSHIP_GUESS_GAME/static/css/main.7d75d1b2.css",
+    "main.js": "/react_TAIWAN_TOWNSHIP_GUESS_GAME/static/js/main.c685d752.js",
     "static/js/787.57d4d9af.chunk.js": "/react_TAIWAN_TOWNSHIP_GUESS_GAME/static/js/787.57d4d9af.chunk.js",
     "index.html": "/react_TAIWAN_TOWNSHIP_GUESS_GAME/index.html",
-    "main.e5660894.css.map": "/react_TAIWAN_TOWNSHIP_GUESS_GAME/static/css/main.e5660894.css.map",
-    "main.08a026c8.js.map": "/react_TAIWAN_TOWNSHIP_GUESS_GAME/static/js/main.08a026c8.js.map",
+    "main.7d75d1b2.css.map": "/react_TAIWAN_TOWNSHIP_GUESS_GAME/static/css/main.7d75d1b2.css.map",
+    "main.c685d752.js.map": "/react_TAIWAN_TOWNSHIP_GUESS_GAME/static/js/main.c685d752.js.map",
     "787.57d4d9af.chunk.js.map": "/react_TAIWAN_TOWNSHIP_GUESS_GAME/static/js/787.57d4d9af.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e5660894.css",
-    "static/js/main.08a026c8.js"
+    "static/css/main.7d75d1b2.css",
+    "static/js/main.c685d752.js"
   ]
 }
