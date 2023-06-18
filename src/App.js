@@ -20,7 +20,9 @@ function App() {
       />
       */
   const {useState} = React;
-
+  let [bingoMessage, setBingoMessage] = useState("");
+  let [isBingoWaiting, setIsBingoWaiting] = useState(0);
+  let [selectedTownName, setSelectedTownName] = useState();
   let [randomQuetion, setRandomQuetion] = useState();
   let [score, setScore] = useState(0);
 
@@ -30,7 +32,16 @@ function App() {
     setRandomQuetion(randomQuetion=mapdata.features[randIndex].properties.TOWNNAME);
   },[]);
   
-  let [selectedTownName, setSelectedTownName] = useState();
+  const bingoAction = () => {
+    const keys = Object.keys(mapdata.features);
+    const randIndex = Math.floor(Math.random() * keys.length);
+    setRandomQuetion(randomQuetion=mapdata.features[randIndex].properties.TOWNNAME);
+    setScore(score=score+1);
+    setSelectedTownName(selectedTownName="");
+    setIsBingoWaiting(isBingoWaiting=0);
+    setBingoMessage(bingoMessage="")
+  }
+  
   const mapFeature=(country, layer)=>{
     layer.on({
       mouseover: (e) => {
@@ -44,12 +55,14 @@ function App() {
         });
       },
       click: (e) => {
-        setSelectedTownName(selectedTownName=e.sourceTarget.feature.properties.TOWNNAME);
-        if(randomQuetion===e.sourceTarget.feature.properties.TOWNNAME){
-          const keys = Object.keys(mapdata.features);
-          const randIndex = Math.floor(Math.random() * keys.length);
-          setRandomQuetion(randomQuetion=mapdata.features[randIndex].properties.TOWNNAME);
-          setScore(score=score+1);
+        if((randomQuetion===e.sourceTarget.feature.properties.TOWNNAME)&&(isBingoWaiting===0)){
+          setSelectedTownName(selectedTownName=e.sourceTarget.feature.properties.TOWNNAME);
+          setIsBingoWaiting(isBingoWaiting=1);
+          setBingoMessage(bingoMessage="答對")
+          setTimeout(bingoAction,1000);
+        }
+        else if(isBingoWaiting===0){
+          setSelectedTownName(selectedTownName=e.sourceTarget.feature.properties.TOWNNAME);
         }
       }
       
@@ -75,7 +88,8 @@ function App() {
       <div className='right' align="center">
         <div className='upper'>題目：{randomQuetion}</div>
         <div className='middle'>所選擇的區域：{selectedTownName}</div>
-        <div className='lower'>分數：{score}</div>
+        <div className='score'>分數：<b>{score}</b></div>
+        <div className='bingoMessage'>{bingoMessage}</div>
       </div>
     </div>
   ); 
