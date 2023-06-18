@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/react_TAIWAN_TOWNSHIP_GUESS_GAME/static/css/main.3d4ba4dc.css",
+    "main.js": "/react_TAIWAN_TOWNSHIP_GUESS_GAME/static/js/main.e73e4cbd.js",
+    "static/js/787.57d4d9af.chunk.js": "/react_TAIWAN_TOWNSHIP_GUESS_GAME/static/js/787.57d4d9af.chunk.js",
+    "index.html": "/react_TAIWAN_TOWNSHIP_GUESS_GAME/index.html",
+    "main.3d4ba4dc.css.map": "/react_TAIWAN_TOWNSHIP_GUESS_GAME/static/css/main.3d4ba4dc.css.map",
+    "main.e73e4cbd.js.map": "/react_TAIWAN_TOWNSHIP_GUESS_GAME/static/js/main.e73e4cbd.js.map",
+    "787.57d4d9af.chunk.js.map": "/react_TAIWAN_TOWNSHIP_GUESS_GAME/static/js/787.57d4d9af.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3d4ba4dc.css",
+    "static/js/main.e73e4cbd.js"
+  ]
+}

@@ -73,9 +73,9 @@ function App() {
       <GeoJSON style={mapStyle} data={mapdata} onEachFeature={mapFeature}></GeoJSON>
       </MapContainer>
       <div className='right' align="center">
-        <div className='upper'>{randomQuetion}</div>
-        <div className='middle'>{selectedTownName}</div>
-        <div className='lower'>{score}</div>
+        <div className='upper'>題目：{randomQuetion}</div>
+        <div className='middle'>所選擇的區域：{selectedTownName}</div>
+        <div className='lower'>分數：{score}</div>
       </div>
     </div>
   ); 
