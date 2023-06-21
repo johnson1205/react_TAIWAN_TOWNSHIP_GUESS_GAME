@@ -39,14 +39,14 @@
 @import url("~leaflet/dist/leaflet.css");
 
 .container {
-  max-width: 100%;
+  
   /* block 水平置中的方法 */
   margin: 0 auto;
   
 }
 
 .leaflet-container {
-  width: 800px; 
+  width: 70%; 
   height: 80vh;
   margin-left: 5%;
   margin-top: 5%;
@@ -55,9 +55,9 @@
 
 .right{
   float: left;
-  width: 50vh;
+  width: 20%;
   margin-top: 21%;
-  margin-left: 3%;
+  margin-left: 2.5%;
   background-color: rgba(204, 204, 204, 0.457);
   border-radius: 6px;
 }
